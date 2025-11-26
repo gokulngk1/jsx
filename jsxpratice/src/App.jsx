@@ -1,22 +1,27 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css'
+import React, { Component } from 'react';
+import Hello from './components/Hello.jsx';
+import State from './components/State.jsx';
+import Counter from './components/Counter.jsx';
+import FormComponent from './components/FormComponent.jsx';
+import ShowHide from './components/ShowHide.jsx';
+import Reducer from './components/reducer.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
-  const name = "Gokul";
-  const age = 22;
-
-  return (
-    // <>
-    //   <h1>Hello</h1>
-    // </>
-    <div>
-      <h1>Hello {name}</h1>
-      <p>Your age is {age + 1}</p>
-    </div>
-  )
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        {/* <Hello /> */}
+        {/* <State />? */}
+        {/* <Counter /> */}
+        {/* <ShowHide /> */}
+        {/* <FormComponent /> */}
+        {/* <Reducer /> */}
+      </div>
+    );
+  }
 }
-
 export default App
