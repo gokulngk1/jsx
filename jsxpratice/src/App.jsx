@@ -9,6 +9,8 @@ import Counter from './components/Counter.jsx';
 import FormComponent from './components/FormComponent.jsx';
 import ShowHide from './components/ShowHide.jsx';
 import Reducer from './components/reducer.jsx';
+import Score from './components/Score.jsx';
+import Useeffect from './components/Useeffect.jsx';
 
 class App extends Component {
   render() {
@@ -20,6 +22,8 @@ class App extends Component {
         {/* <ShowHide /> */}
         {/* <FormComponent /> */}
         {/* <Reducer /> */}
+        {/* <Score/> */}
+        <Useeffect />
       </div>
     );
   }
