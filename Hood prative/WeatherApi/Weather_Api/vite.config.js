@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+const { defineConfig } = require('vite')
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
+// Important: @vitejs/plugin-react is ESM-only. Vite's config may be loaded via
+// CommonJS, so use dynamic import to load the ESM plugin when necessary.
+module.exports = defineConfig(async () => {
+  const react = (await import('@vitejs/plugin-react')).default
+  return { plugins: [react()] }
 })

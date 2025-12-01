@@ -11,6 +11,22 @@ Currently, two official plugins are available:
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Environment variables
+
+This project reads the OpenWeatherMap API key from an environment variable named `VITE_OWM_KEY`.
+
+1. Copy `.env.example` to a `.env` file in the project root:
+
+```bash
+cp .env.example .env
+```
+
+2. Replace the placeholder with your actual OpenWeatherMap API key.
+
+3. The project uses Vite, so variables that you want exposed to client-side code must begin with `VITE_` (e.g. `VITE_OWM_KEY`).
+
+Note: `.env` is ignored by `.gitignore` to avoid committing secrets. Keep your real API keys private.
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
